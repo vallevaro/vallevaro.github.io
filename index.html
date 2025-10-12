@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Valle Varo — Theoretical Physics & AI</title>
+  <title>Valle Varo — Theoretical Physics & Gravity</title>
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
@@ -72,12 +72,10 @@
             <h1 class="section-title">Valle Varo</h1>
             <p class="tags">Theoretical physics · Gravity</p>
             <p class="affil">
-              Profesora e investigadora (Universidad de Deusto)<br/>
+              Tenure track assistant professor and researcher<br/>
               Research interests: general relativity, quantum gravity, covariant phase space.
             </p>
             <p class="quick-links">
-              <a class="button small" href="https://arxiv.org/search/gr-qc?searchtype=autho              <a class="button small" href="https://scholar.google.es/citations?hl=es&tzom=-120&user=i7A5r1EAAAAJ&authuser=1" target="_blank" rel="noopener">Google Scholar</a>
-r&query=Varo,+V" target="_blank" rel="noopener">arXiv</a>
               <a class="button small" href="https://inspirehep.net/authors/1981581" target="_blank" rel="noopener">INSPIRE</a>
             </p>
           </div>
@@ -85,53 +83,26 @@ r&query=Varo,+V" target="_blank" rel="noopener">arXiv</a>
       </div>
     </section>
 
-    <!-- Research -->
-    <section id="research" class="wrapper style2 fade-up">
-      <div class="inner">
-        <h2 class="section-title">Research</h2>
-        <p>
-          I work at the interface of general relativity and quantum theory, with a focus on covariant
-          phase space methods, boundary symmetries and charges, and models of quantum/semiclassical black holes.
-      
-        </p>
-        <ul>
-          <li>Covariant phase space and surface charges in gravity.</li>
-          <li>Quantum black holes: information flow, evaporation, near-horizon symmetries.</li>
-          <li>Spin networks / spinfoams; discrete geometry and renormalization.</li>
-          <li>Geometric quantisation</li>
-        </ul>
-        <!-- ...existing code... -->
-        <p class="tags">Selected collaborators: CASPER group EHU, Computational Mathematics DeustoTech</p>
-        <!-- ...existing code... -->      </div>
-    </section>
+ <!-- Research -->
+<section id="research" class="wrapper style2 fade-up">
+  <div class="inner">
+    <h2 class="section-title">Research</h2>
+    <p>
+      I work at the interface of general relativity and quantum theory, with a focus on covariant phase space methods, boundary symmetries and charges, and models of quantum/semiclassical black holes. My research interests include covariant phase space and surface charges in gravity, quantum black holes (information flow, evaporation, near-horizon symmetries), spin networks and spinfoams, discrete geometry and renormalization, and geometric quantisation. Selected collaborators: CASPER group EHU, Computational Mathematics DeustoTech.
+    </p>
+  </div>
+</section>
 
-    <script>
-  async function loadPublications() {
-    const response = await fetch('https://inspirehep.net/api/literature?sort=mostrecent&size=5&authors=1981581');
-    const data = await response.json();
-    const pubs = data.hits.hits;
-    const ul = document.querySelector('.pubs');
-    ul.innerHTML = '';
-    pubs.forEach(pub => {
-      const title = pub.metadata.titles[0].title;
-      const authors = pub.metadata.authors.map(a => a.full_name).join(', ');
-      const year = pub.metadata.publication_info?.[0]?.year || pub.metadata.preprint_date?.slice(0,4) || '';
-      const arxiv = pub.metadata.arxiv_eprints?.[0]?.value;
-      const arxivLink = arxiv ? `<a href="https://arxiv.org/abs/${arxiv}" target="_blank" rel="noopener">arXiv</a>` : '';
-      const journal = pub.metadata.publication_info?.[0]?.journal_title;
-      const doi = pub.metadata.doi;
-      const doiLink = doi ? `<a href="https://doi.org/${doi}" target="_blank" rel="noopener">DOI</a>` : '';
-      const venue = journal ? `<span class="venue">${journal} (${year})</span>.` : `<span class="venue">${year}</span>.`;
-      ul.innerHTML += `<li>
-        <strong>${title}</strong> —
-        <span class="authors">${authors}</span>,
-        ${venue}
-        ${arxivLink} ${doiLink}
-      </li>`;
-    });
-  }
-  loadPublications();
-  </script>
+<!-- Publications -->
+<section id="publications" class="wrapper style1 fade-up">
+  <div class="inner">
+    <h2 class="section-title">Latest Publications</h2>
+    <ul class="pubs"></ul>
+  </div>
+</section>
+
+
+
 
     <!-- Teaching -->
     <section id="teaching" class="wrapper style1 fade-up">
