@@ -1,209 +1,208 @@
 <!DOCTYPE HTML>
 <!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Customized from "Hyperspace" by HTML5 UP
+  https://html5up.net | @ajlkn
+  License: CCA 3.0 (html5up.net/license)
 -->
-<html>
-	<head>
-		<title>Valle Varo</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Valle Varo — Theoretical Physics & AI</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    /* Minimal overrides to get a clean academic look like Speziale's page */
+    :root {
+      --accent: #1f7a8c;
+    }
+    #intro .inner { max-width: 900px; }
+    .profile-block {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .profile-block img {
+      width: 160px; height: 160px; object-fit: cover; border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .quick-links a { margin-right: .75rem; white-space: nowrap; }
+    .affil { line-height: 1.35; }
+    .section-title { margin-bottom: .75rem; }
+    .pubs { list-style: none; padding-left: 0; }
+    .pubs li { margin: .6rem 0; }
+    .pubs li .venue { opacity: .8; }
+    .tags { font-size: .9em; opacity: .85; }
+    .teaching-list, .students-list { list-style: none; padding-left: 0; }
+    .teaching-list li, .students-list li { margin: .4rem 0; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 680px) {
+      .profile-block { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="is-preload">
+  <!-- Sidebar -->
+  <section id="sidebar">
+    <div class="inner">
+      <nav>
+        <ul>
+          <li><a href="#intro">Home</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#students">Students</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who we are</a></li>
-							<li><a href="#two">What we do</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+  <!-- Wrapper -->
+  <div id="wrapper">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Intro / Home -->
+    <section id="intro" class="wrapper style1 fade-up">
+      <div class="inner">
+        <div class="profile-block">
+          <img src="images/profile.jpg" alt="Valle Varo portrait" />
+          <div>
+            <h1 class="section-title">Valle Varo</h1>
+            <p class="tags">Theoretical physics · Gravity · Applied mathematics · AI</p>
+            <p class="affil">
+              Profesora e investigadora (Universidad de Deusto)<br/>
+              Research interests: general relativity, quantum gravity, covariant phase space, control & AI.
+            </p>
+            <p class="quick-links">
+              <a class="button small" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+              <a class="button small" href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a>
+              <a class="button small" href="https://inspirehep.net/" target="_blank" rel="noopener">INSPIRE</a>
+              <a class="button small" href="docs/CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+              <a class="button small" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Valle Varo</h1>
-							<p>Theoretical physics, gravity and applied maths. <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+    <!-- Research -->
+    <section id="research" class="wrapper style2 fade-up">
+      <div class="inner">
+        <h2 class="section-title">Research</h2>
+        <p>
+          I work at the interface of general relativity and quantum theory, with a focus on covariant
+          phase space methods, boundary symmetries and charges, and models of quantum/semiclassical black holes.
+          I am also interested in quantum control and learning for physics-inspired systems.
+        </p>
+        <ul>
+          <li>Covariant phase space and surface charges in gravity.</li>
+          <li>Quantum black holes: information flow, evaporation, near-horizon symmetries.</li>
+          <li>Spin networks / spinfoams; discrete geometry and renormalization.</li>
+          <li>Control theory and machine learning for quantum dynamics.</li>
+        </ul>
+        <p class="tags">Selected collaborators: <em>(add names or remove)</em></p>
+      </div>
+    </section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+    <!-- Publications (sample structure) -->
+    <section id="publications" class="wrapper style3 fade-up">
+      <div class="inner">
+        <h2 class="section-title">Selected Publications</h2>
+        <p>For a complete and up-to-date list, see <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> or <a href="https://inspirehep.net/" target="_blank" rel="noopener">INSPIRE</a>.</p>
+        <ul class="pubs">
+          <li>
+            <strong>Extended corner symmetry, charge bracket and Einstein’s equations</strong> —
+            <span class="authors">L. Freidel, R. Oliveri, D. Pranzetti, <u>S. Speziale</u></span>,
+            <span class="venue">JHEP 09 (2021) 083</span>.
+            <a href="https://arxiv.org/abs/2104.12881" target="_blank" rel="noopener">arXiv</a> ·
+            <a href="https://link.springer.com/article/10.1007/JHEP09(2021)083" target="_blank" rel="noopener">Journal</a>
+          </li>
+          <li>
+            <strong>Null Infinity as a Weakly Isolated Horizon</strong> —
+            <span class="authors">A. Rignon-Bret, S. Majumdar, <u>S. Speziale</u>, W.-D. Tan</span>,
+            <span class="venue">arXiv:2402.17977 (2024)</span>.
+            <a href="https://arxiv.org/abs/2402.17977" target="_blank" rel="noopener">arXiv</a>
+          </li>
+          <li>
+            <strong>Loop quantum gravity</strong> —
+            <span class="authors">C. Rovelli</span>,
+            <span class="venue">Living Rev. Relativ. (2008)</span>.
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5256093/" target="_blank" rel="noopener">Open access</a>
+          </li>
+        </ul>
+        <p class="tags"><em>Replace the above with your own publications (or auto-populate from BibTeX later).</em></p>
+      </div>
+    </section>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+    <!-- Teaching -->
+    <section id="teaching" class="wrapper style1 fade-up">
+      <div class="inner">
+        <h2 class="section-title">Teaching</h2>
+        <ul class="teaching-list">
+          <li><strong>Field Theoretical Aspects of General Relativity</strong> (MSc/PhD). Materials: <a href="docs/FTGR-Program.pdf">program</a>, <a href="docs/FTGR-Notes.pdf">lecture notes</a>.</li>
+          <li><strong>Introduction to Loop Quantum Gravity</strong>. Materials: <a href="#">notes</a>, <a href="#">videos</a>.</li>
+          <li><strong>Artificial Intelligence & Search</strong> (BSc). Repos and notebooks: <a href="#">GitHub</a>.</li>
+        </ul>
+      </div>
+    </section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+    <!-- Students -->
+    <section id="students" class="wrapper style2 fade-up">
+      <div class="inner">
+        <h2 class="section-title">Students</h2>
+        <ul class="students-list">
+          <li><strong>PhD</strong>: Name Surname (topic, year–ongoing)</li>
+          <li><strong>MSc</strong>: Name Surname (topic, year)</li>
+          <li><strong>Alumni</strong>: Name Surname (now at …)</li>
+        </ul>
+      </div>
+    </section>
 
-			</div>
+    <!-- Contact -->
+    <section id="contact" class="wrapper style3 fade-up">
+      <div class="inner">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <p><strong>Email</strong><br/>
+            <a href="mailto:valle.varo@deusto.es">valle.varo@deusto.es</a></p>
+            <p><strong>Office</strong><br/>
+            Universidad de Deusto — Dept. of …<br/>
+            48007 Bilbao, Spain</p>
+          </div>
+          <div>
+            <p><strong>Links</strong><br/>
+              <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> ·
+              <a href="https://orcid.org" target="_blank" rel="noopener">ORCID</a> ·
+              <a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a> ·
+              <a href="https://inspirehep.net" target="_blank" rel="noopener">INSPIRE</a> ·
+              <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+  <!-- Footer -->
+  <footer id="footer" class="wrapper style1-alt">
+    <div class="inner">
+      <ul class="menu">
+        <li>&copy; Valle Varo. All rights reserved.</li>
+        <li>Theme: <a href="https://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </div>
+  </footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
