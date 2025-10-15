@@ -3924,3 +3924,31 @@ input, select, textarea {
 .collab-list a:hover {
   text-decoration: underline;
 }
+/* Reveal de subsecciones (Research, etc.) */
+.subsection {
+  opacity: 0;
+  transform: translateY(12px) scale(0.992);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+
+.subsection.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Un pelín de “stagger” interno para título/texto */
+.subsection h3, .subsection p {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.subsection.reveal-visible h3 {
+  transition-delay: calc(var(--stagger, 0ms) + 60ms);
+  opacity: 1; transform: none;
+}
+.subsection.reveal-visible p {
+  transition-delay: calc(var(--stagger, 0ms) + 140ms);
+  opacity: 1; transform: none;
+}
