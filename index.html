@@ -9,7 +9,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Valle Varo — Researcher</title>
-  <meta name="description" content="Valle Varo — theoretical physics, gauge theories, quantum simulation, covariant phase space." />
+  <meta name="description" content="Valle Varo — theoretical physics, gauge theories, quantum simulation" />
 
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -97,10 +97,12 @@
             <p class="tags">Applied Mathematics</p>
             <p class="affil">
               Researcher and assistant professor<br/>
-              Gauge theories - High energy physics - Gravity
+                Gauge theories<br/>
+                High energy physics<br/>
+                Gravity
             </p>
             <p class="quick-links">
-              <a class="button small" href="https://inspirehep.net/authors/1981581" target="_blank" rel="noopener">INSPIRE</a>
+              <a class="button small" href="https://inspirehep.net/authors/1981581" target="_blank" rel="noopener">inspireHEP</a>
             </p>
           </div>
         </div>
@@ -186,7 +188,7 @@
             <strong>Data Science</strong> (BSc, 2024–present, Universidad de Deusto, 3rd year Computer Science & AI, 2nd semester)
           </li>
           <li>
-            <strong>Unsupervised and Forecasting Models in AI</strong> (BSc, 2024–present, Universidad de Deusto, 3rd year Computer Science & AI, 2nd semester)
+            <strong>Forecasting Models in AI</strong> (BSc, 2024–present, Universidad de Deusto, 3rd year Computer Science & AI, 2nd semester)
           </li>
           <li>
             <strong>Big Data</strong> (BSc, 2024–2025, Universidad de Deusto)
@@ -346,68 +348,6 @@
   document.addEventListener('DOMContentLoaded', loadPublications);
   </script>
 
-  <!-- Lightweight lightbox for #gallery (custom) -->
-  <script>
-  (function initGallery(){
-    const grid = document.querySelector('#gallery .gallery-grid');
-    const box  = document.getElementById('lightbox');
-    if (!grid || !box) return;
-
-    const img  = box.querySelector('.lb-image');
-    const btnC = box.querySelector('.lb-close');
-    const btnP = box.querySelector('.lb-prev');
-    const btnN = box.querySelector('.lb-next');
-    const counter = box.querySelector('.lb-counter');
-
-    const items = Array.from(grid.querySelectorAll('.gallery-item'));
-    let idx = 0;
-
-    function open(i){
-      idx = (i+items.length)%items.length;
-      const a = items[idx];
-      const full = a.dataset.full || a.getAttribute('href');
-      const alt = a.querySelector('img')?.alt || '';
-      img.src = full; img.alt = alt;
-      counter.textContent = (idx+1) + ' / ' + items.length;
-      box.hidden = false;
-      document.body.style.overflow = 'hidden';
-    }
-    function close(){
-      box.hidden = true;
-      img.src = ''; img.alt = '';
-      document.body.style.overflow = '';
-    }
-    function next(){ open(idx+1); }
-    function prev(){ open(idx-1); }
-
-    grid.addEventListener('click', (e)=>{
-      const a = e.target.closest('.gallery-item');
-      if (!a) return;
-      e.preventDefault();
-      open(items.indexOf(a));
-    });
-
-    btnC.addEventListener('click', close);
-    btnN.addEventListener('click', next);
-    btnP.addEventListener('click', prev);
-
-    box.addEventListener('click', (e)=> { if (e.target === box) close(); });
-    window.addEventListener('keydown', (e)=>{
-      if (box.hidden) return;
-      if (e.key === 'Escape') close();
-      else if (e.key === 'ArrowRight') next();
-      else if (e.key === 'ArrowLeft') prev();
-    }, {passive:true});
-
-    // Basic swipe support
-    let sx=0;
-    img.addEventListener('touchstart', e=> sx = e.touches[0].clientX, {passive:true});
-    img.addEventListener('touchend', e=>{
-      const dx = e.changedTouches[0].clientX - sx;
-      if (Math.abs(dx) > 40) (dx<0 ? next() : prev());
-    }, {passive:true});
-  })();
-  </script>
 
 </body>
 </html>
